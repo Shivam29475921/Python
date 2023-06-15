@@ -22,6 +22,6 @@ if price_of_the_bag < 5001:
     message = client.messages.create(
         body=f"PRICE OF CHARGING BAG DROPPED BELOW 500!!\nCURRENT PRICE = {price_of_the_bag}\nLINK: {URL}\nKINE NE BAL",
         from_='+13613146342',
-        to='+917980046712'
+        to='+91----------'
     )
 print(message)
