@@ -5,8 +5,8 @@ import ssl
 GMAIL_SMTP_SERVER = "smtp.gmail.com"
 PORT = 465
 EMAIL = "shivamdas16122002@gmail.com"
-PASSWORD = "wxdzfazvtfnjfwzm"
-# PASSWORD = "M(S+8*N6#4weF&a7M&RD"
+PASSWORD = "--------------"
+# PASSWORD = "----------------"
 context = ssl.create_default_context()
 
 response = requests.get("https://api.npoint.io/3af99b44bd26f7cb848a")
