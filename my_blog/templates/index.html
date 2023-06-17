@@ -1,0 +1,42 @@
+{% include "header.html" %}
+        <!-- Page Header-->
+        <header class="masthead" style="background-image: url({{ url_for('static', filename='assets/img/me.jpg') }}); background-size:contain; background-color:yellow; filter:brightness(1.5);">
+            <div class="container position-relative px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <div class="site-heading">
+                            <h1>Shivam Das</h1>
+                            <span class="subheading" style="color: black; text-shadow: -1px -1px 0 #fff, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;">Active coder | Python | Web development | 5 <span style="color:yellow">★</span> in Hackerrank </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Main Content-->
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
+                    <!-- Post preview-->
+                    {% for post in all_posts %}
+                    <div class="post-preview">
+                        <a href="{{ url_for('show_post', index=post.id) }}">
+                            <h2 class="post-title">{{ post.title}}</h2>
+                            <h3 class="post-subtitle">{{ post.subtitle }}</h3>
+                        </a>
+                        <p class="post-meta">
+                            Posted by
+                            <a href="https://www.linkedin.com/in/shivam-das-614b8121b/" target="_blank">{{ post.author }}</a>
+                            on {{ post.date }}
+                        </p>
+                    </div>
+                    {% endfor %}
+
+                    <!-- Divider-->
+                    <hr class="my-4" />
+                    <!-- Pager-->
+<!--                    <div class="d-flex justify-content-end mb-4"><a class="btn btn-primary text-uppercase" href="#!">Older Posts →</a></div>-->
+                </div>
+            </div>
+        </div>
+
+{% include "footer.html" %}
